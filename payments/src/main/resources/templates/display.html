@@ -1,0 +1,22 @@
+<html xmlns:th="https://thymeleaf.org">
+<table border="1">
+	<tr>
+		<td><h4>User Name:</h4></td>
+		<td><h4 th:text="${user.userId}"></h4></td>
+	</tr>
+	
+		<td><h4>Account no:</h4></td>
+		<td><h4 th:text="${user.account.accountNo}"></h4></td>
+
+
+	</tr>
+	<tr>
+		<td><h4>Card no:</h4></td>
+		<td><h4>Card Name:</h4></td>
+	</tr>
+	<tr th:each="card : ${user.account.cards}">
+		<td><h4 th:text="${card.cardNo}"></h4></td>
+		<td><h4 th:text="${card.cardName}"></h4></td>
+	</tr>
+</table>
+</html>
